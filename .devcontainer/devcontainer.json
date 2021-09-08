@@ -11,12 +11,12 @@
     }
   },
   "overrideCommand": false,
-  "runArgs": ["--name={repository name}"],
+  "runArgs": ["--name=msw-sample-with-nextjs"],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind",
-    "source={repository name}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-    "source={repository name}-vscode_extensions,target=/home/vscode/.vscode-server/extensions,type=volume",
-    "source={repository name}-zsh_history,target=/home/vscode/commandhistory,type=volume"
+    "source=msw-sample-with-nextjs-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=msw-sample-with-nextjs-vscode_extensions,target=/home/vscode/.vscode-server/extensions,type=volume",
+    "source=msw-sample-with-nextjs-zsh_history,target=/home/vscode/commandhistory,type=volume"
   ],
   // * Set *default* container specific settings.json values on container create.
   "settings": {

@@ -8,7 +8,7 @@ ARG USERNAME=${USERNAME:-"vscode"}
 ARG USER_UID=${USER_UID:-"2000"}
 ARG USER_GID=${USER_UID}
 
-ARG WORKING_DIR=/workspaces/{repository-name}
+ARG WORKING_DIR=/workspaces/msw-sample-with-nextjs
 
 ARG INSTALL_ZSH="true"
 ARG ENABLE_NONROOT_DOCKER="true"

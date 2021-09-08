@@ -1,20 +1,21 @@
 {
-  "name": "nodejs-and-typescript-devcontainer-template",
+  "name": "msw-sample-with-nextjs",
   "version": "1.0.0",
-  "description": "This is a template for a devcontainer of Node.js and TypeScript.",
+  "description": "",
   "license": "MIT",
   "private": true,
   "author": {
     "name": "roottool",
     "url": "https://github.com/roottool"
   },
-  "repository": "https://github.com/roottool/nodejs-and-typescript-devcontainer-template.git",
+  "repository": "https://github.com/roottool/msw-sample-with-nextjs.git",
   "bugs": {
-    "url": "https://github.com/roottool/r6s-sensivity-calculator-for-web/issues"
+    "url": "https://github.com/roottool/msw-sample-with-nextjs/issues"
   },
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "prepare": "is-ci || husky install",
+    "dev": "next dev",
     "lint": "run-p -c lint:*",
     "lint:check-types": "tsc --noEmit",
     "lint:eslint": "eslint . --color --ext .js,.jsx,.ts,.tsx",
@@ -23,8 +24,8 @@
     "fix:eslint": "eslint . --fix --color --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "test": "run-p test:*",
-    "test:jest": "echo \"Write tests!\"",
-    "test:check-types": "echo \"tsc --noEmit\""
+    "test:jest": "jest",
+    "test:check-types": "tsc --noEmit"
   },
   "importSort": {
     ".js, .jsx, .ts, .tsx": {
@@ -33,36 +34,53 @@
     }
   },
   "lint-staged": {
-    "*.{js|jsx|ts|tsx}": [
+    "**/*.{js|ts|tsx}": [
       "yarn fix",
       "yarn format"
     ],
-    "*.{json|md}": [
+    "**/*.{json|md}": [
       "yarn format"
     ],
     ".{eslint|prettier}rc": [
       "yarn format"
     ]
   },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "swr": "^1.0.0"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
-    "eslint": "^7.31.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "babel-jest": "^27.1.1",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sort-destructure-keys": "^1.3.5",
-    "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "eslint-plugin-typescript-sort-keys": "^1.7.0",
-    "husky": "^7.0.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-typescript-sort-keys": "^1.8.0",
+    "husky": "^7.0.2",
     "import-sort-style-module": "^6.0.0",
     "is-ci": "^3.0.0",
-    "lint-staged": "^11.1.1",
+    "jest": "^27.1.1",
+    "lint-staged": "^11.1.2",
+    "msw": "^0.35.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   }
 }

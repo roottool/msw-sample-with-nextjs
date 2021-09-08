@@ -19,6 +19,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": ["next-env.d.ts", "**/*.config.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".next"]
 }
