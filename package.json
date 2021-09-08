@@ -34,11 +34,14 @@
     }
   },
   "lint-staged": {
-    "**/*.{js|ts|tsx}": [
+    "!(*config|*setup).{js|ts|tsx}": [
       "yarn fix",
       "yarn format"
     ],
-    "**/*.{json|md}": [
+    "*.{json|md}": [
+      "yarn format"
+    ],
+    "(*config|*setup).{js|ts|tsx}": [
       "yarn format"
     ],
     ".{eslint|prettier}rc": [
