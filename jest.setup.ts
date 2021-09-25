@@ -1,4 +1,5 @@
-import { server } from '@/mocks/server'
+// import { server } from '@/mocks/server'
+import { server } from './__mocks__/server'
 
 import '@testing-library/jest-dom'
 

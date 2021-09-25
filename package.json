@@ -34,19 +34,9 @@
     }
   },
   "lint-staged": {
-    "!(*config|*setup).{js|ts|tsx}": [
-      "yarn fix",
-      "yarn format"
-    ],
-    "*.{json|md}": [
-      "yarn format"
-    ],
-    "(*config|*setup).{js|ts|tsx}": [
-      "yarn format"
-    ],
-    ".{eslint|prettier}rc": [
-      "yarn format"
-    ]
+    ".js|ts|tsx": ["yarn fix", "yarn format"],
+    "*.json|md": ["yarn format"],
+    ".eslint|prettierrc": ["yarn format"]
   },
   "dependencies": {
     "axios": "^0.21.4",
