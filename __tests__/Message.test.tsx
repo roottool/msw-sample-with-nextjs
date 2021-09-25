@@ -1,4 +1,5 @@
 import { render, waitForElementToBeRemoved } from '@testing-library/react'
+
 import Message from '@/components/Message'
 
 describe('Message', () => {
